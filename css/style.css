@@ -1,0 +1,47 @@
+
+#circle {
+    background: darkgreen;
+    width: 40em;
+    height: 20em;
+    border-radius: 40%;
+    position: absolute;
+    /*
+    transform: rotate(0deg) ;
+    -webkit-transform: rotate(0deg) ;
+    -moz-transform: rotate(0deg) ;
+    -o-transform: rotate(0deg) ;
+    -ms-transform: rotate(0deg) ;
+    */
+}
+
+#oval{
+    left: 40px;
+    top: 95px;
+    height:20em;
+    width:44em; /*4times height*/
+    border-radius: 10em / 11em;   /* 2times height/height */
+    -webkit-border-radius: 10em / 11em;     /* 2times height/height */
+    /*border: 2px solid red;*/
+    background: darkgreen;
+    position: relative;
+
+}
+
+
+#parent {
+    background-color:white;
+    border:2px solid blue;
+    position:relative;
+    /*background-image: url("../img/ft_green_poker_skin.png");
+    background-repeat: no-repeat;
+    background-position: top left;*/
+    width:794px;
+    height: 577px;
+}
+
+#div1 {width:4em;height:4em;position:absolute;bottom:0;left:0;background:yellow;-webkit-transform: rotate(60deg) ;}
+#div2 {width:4em;height:4em;position:absolute;bottom:0;left:100;background:yellow;}
+#div3 {width:4em;height:4em;position:absolute;bottom:0;left:200;background:yellow;}
+#div4 {width:4em;height:4em;position:absolute;top:0;left:0;background:yellow;}
+#div5 {width:4em;height:4em;position:absolute;top:0;left:100;background:yellow;}
+#div6 {width:4em;height:4em;position:absolute;top:0;left:200;background:yellow;}
