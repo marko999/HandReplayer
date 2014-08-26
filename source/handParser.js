@@ -19,5 +19,21 @@ hr.parseBuyIn = function(hand){
     return regexp.exec(hand)[0];
 }
 
+hr.parseLevel = function(hand){
+    var regexp = /(Level )[A-Z] \([0-9]+\/[0-9]+\)/;
+    return regexp.exec(hand)[0];
+}
+
+hr.parseDate = function(hand){
+    var regexp = /[0-9]+\/[0-9]+\/[0-9]+ [0-9]+:[0-9]+:[0-9]+ [A-Z]+/;
+    return regexp.exec(hand)[0];
+}
+
+hr.parseTypeOfGame = function(hand){
+    var regexp = /Hold'em\s[A-Z][a-z]+.\s?[A-Za-z]+/;
+    return regexp.exec(hand)[0];
+}
+
+
 
 

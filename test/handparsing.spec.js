@@ -1,5 +1,5 @@
-var psHandSample = "PokerStars Hand #119430001460: Tournament #943046970, $1.00+$0.10 USD Hold'em No Limit - Level X (300/600) - 2014/07/30 0:26:23 ET" +
-                   "Table '943046970 83' 9-max Seat #5 is the button" +
+var psHandSample = "PokerStars Hand #119430001460: Tournament #943046970, $1.00+$0.10 USD Hold'em No Limit - Level X (300/600) - 2014/07/30 0:26:23 ET<br/>" +
+                   "Table '943046970 83' 9-max Seat #5 is the button<br/>" +
                    "Seat 1: Baron Douro (26850 in chips)" +
                    "Seat 2: stevestead11 (3775 in chips)" +
                    "Seat 3: Cunhosky (2000 in chips)" +
@@ -86,5 +86,20 @@ describe("Hand parsing summary:", function() {
         var buyin = hr.parseBuyIn(this.hand);
         expect(buyin).toEqual("$1.00+$0.10 USD");
     });
+
+    it("level", function(){
+       var level = hr.parseLevel(this.hand);
+        expect(level).toEqual("Level X (300/600)");
+    });
+
+    it("date", function(){
+       var date = hr.parseDate(this.hand);
+        expect(date).toEqual("2014/07/30 0:26:23 ET");
+    });
+
+    it("type of game", function(){
+        var type = hr.parseTypeOfGame(this.hand);
+        expect(type).toEqual("Hold'em No Limit");
+    })
 });
 
