@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d7c8481-0d68-47c2-a34e-1ea78258b767" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/handParser.js" afterPath="$PROJECT_DIR$/source/handParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/handparsing.spec.js" afterPath="$PROJECT_DIR$/test/handparsing.spec.js" />
-    </list>
+    <list default="true" id="3d7c8481-0d68-47c2-a34e-1ea78258b767" name="Default" comment="" />
     <ignored path="HR.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="3d7c8481-0d68-47c2-a34e-1ea78258b767" time="1408857535569" ignored="false" />
@@ -37,19 +33,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="handparsing.spec.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="handparsing.spec.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/handparsing.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="55" selection-start="5113" selection-end="5113" vertical-scroll-proportion="0.0">
+            <state line="3" column="36" selection-start="332" selection-end="332" vertical-scroll-proportion="-0.74006444">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="handParser.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="handParser.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/handParser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="19" selection-start="784" selection-end="784" vertical-scroll-proportion="0.46723953">
+            <state line="29" column="19" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -467,16 +463,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/handparsing.spec.js">
+    <entry file="file://$PROJECT_DIR$/source/handParser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="55" selection-start="5113" selection-end="5113" vertical-scroll-proportion="0.0">
+        <state line="29" column="19" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/handParser.js">
+    <entry file="file://$PROJECT_DIR$/test/handparsing.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="19" selection-start="784" selection-end="784" vertical-scroll-proportion="0.46723953">
+        <state line="3" column="36" selection-start="332" selection-end="332" vertical-scroll-proportion="-0.74006444">
           <folding />
         </state>
       </provider>
