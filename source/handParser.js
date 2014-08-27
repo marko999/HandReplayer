@@ -1,7 +1,7 @@
 var hr = hr || {};
 
 hr.parseHandNumber = function(hand){
-    var regexp = /(PokerStars Hand #)+[0-9]+/;
+    var regexp = /PokerStars\sHand\s(#\d+)/;
     var result = regexp.exec(hand)[0];
     regexp = /#+[0-9]+/;
     return regexp.exec(result)[0];
@@ -32,6 +32,11 @@ hr.parseDate = function(hand){
 hr.parseTypeOfGame = function(hand){
     var regexp = /Hold'em\s[A-Z][a-z]+.\s?[A-Za-z]+/;
     return regexp.exec(hand)[0];
+}
+
+hr.parseTableNumber = function(hand){
+    var regexp = /Table\s'(\d+\s\d+)'/;
+    return regexp.exec(hand)[1];
 }
 
 
