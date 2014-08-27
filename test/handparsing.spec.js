@@ -101,5 +101,10 @@ describe("Hand parsing summary:", function() {
         var type = hr.parseTypeOfGame(this.hand);
         expect(type).toEqual("Hold'em No Limit");
     })
+    
+    it("table number", function(){
+       var table = hr.parseTableNumber(this.hand);
+        expect(table).toEqual("943046970 83");
+    });
 });
 
