@@ -35,6 +35,16 @@ hr.parseTableNumber = function(hand){
     return regexp.exec(hand)[1];
 }
 
+hr.parseTableType = function(hand){
+    var regexp = /Table '\d+\s?\d+'\s(\d-max)/;
+    return regexp.exec(hand)[1];
+}
+
+hr.parseButtonInfo = function(hand){
+    var regexp = /Seat\s#(\d)/;
+    return regexp.exec(hand)[1];
+}
+
 
 
 

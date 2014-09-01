@@ -106,5 +106,15 @@ describe("Hand parsing summary:", function() {
        var table = hr.parseTableNumber(this.hand);
         expect(table).toEqual("943046970 83");
     });
+
+    it("table type", function(){
+        var ttype = hr.parseTableType(this.hand);
+        expect(ttype).toEqual("9-max");
+    });
+
+    it("where is the button", function(){
+        var buttonPosition = hr.parseButtonInfo(this.hand);
+        expect(buttonPosition).toEqual('5');
+    })
 });
 
