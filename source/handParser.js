@@ -45,6 +45,17 @@ hr.parseButtonInfo = function(hand){
     return regexp.exec(hand)[1];
 }
 
+hr.parseSeat = function(seatString){
+    var regexp = /Seat\s(\d):\s([\w\p\s]+)\((\d+)\sin\schips\)/;
+    var info = {};
+    var result = regexp.exec(seatString);
+    info.seat = result[1];
+    info.name = result[2].trim();
+    info.stack = result[3];
+    return info;
+    
+}
+
 
 
 
