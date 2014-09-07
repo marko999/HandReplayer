@@ -53,8 +53,29 @@ hr.parseSeat = function(seatString){
     info.name = result[2].trim();
     info.stack = result[3];
     return info;
-    
 }
+
+hr.parseAllSeats = function(hand){
+    var regexp = /Seat\s(\d):\s([\w\p\s]+)\((\d+)\sin\schips\)/g;
+    var myArray = [];
+    var matches;
+
+    while (matches = regexp.exec(hand)) {
+        myArray.push(matches[0]);
+    }
+    var allSeats = [];
+    for(var i=0;i<myArray.length;i++){
+        var seatInfo = hr.parseSeat(myArray[i]);
+        allSeats.push({
+            seat: seatInfo.seat,
+            name: seatInfo.name,
+            stack: seatInfo.stack
+        })
+    }
+
+    return allSeats;
+}
+
 
 
 
