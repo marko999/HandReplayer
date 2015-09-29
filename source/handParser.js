@@ -76,6 +76,9 @@ hr.parseAllSeats = function(hand){
     return allSeats;
 }
 
+module.exports = hr;
+
+
 
 
 
