@@ -57,64 +57,84 @@ describe("Hand parsing summary:", function() {
         this.hand = psHandSample;
     })
 
-    it("hand properly loaded", function() {
-        expect(this.hand != undefined).to.equal(true);
-    });
-
-    it("buyin", function(){
-        var buyin = hr.parseBuyIn(this.hand);
-        expect(buyin).to.equal("$0.75+$0.07 USD");
-    });
-
-    it("type of game", function(){
-        var type = hr.parseTypeOfGame(this.hand);
-        expect(type).to.equal("Hold'em No Limit");
+    describe("init", function(){
+      it("hand properly loaded", function() {
+          expect(this.hand != undefined).to.equal(true);
+      });
     })
 
-    it("table type", function(){
-        var ttype = hr.parseTableType(this.hand);
-        expect(ttype).to.equal("9-max");
-    });
+    describe("meta data", function(){
+      it("buyin", function(){
+          var buyin = hr.parseBuyIn(this.hand);
+          expect(buyin).to.equal("$0.75+$0.07 USD");
+      });
 
-    it("where is the button", function(){
-        var buttonPosition = hr.parseButtonInfo(this.hand);
-        expect(buttonPosition).to.equal('8');
-    })
+      it("type of game", function(){
+          var type = hr.parseTypeOfGame(this.hand);
+          expect(type).to.equal("Hold'em No Limit");
+      })
 
-    it("parse all seats", function(){
-        var seatInfo = hr.parseAllSeats(this.hand);
+      it("table type", function(){
+          var ttype = hr.parseTableType(this.hand);
+          expect(ttype).to.equal("9-max");
+      });
 
-        expect(seatInfo[0].seat).to.equal('1');
-        expect(seatInfo[0].name).to.equal('GCSANTOS10');
-        expect(seatInfo[0].stack).to.equal('17670');
-
-        expect(seatInfo[1].seat).to.equal('2');
-        expect(seatInfo[1].name).to.equal('markoAs999');
-        expect(seatInfo[1].stack).to.equal('11224');
-
-        expect(seatInfo[2].seat).to.equal('3');
-        expect(seatInfo[2].name).to.equal('Martin Royle');
-        expect(seatInfo[2].stack).to.equal('13085');
-
-        expect(seatInfo[3].seat).to.equal('4');
-        expect(seatInfo[3].name).to.equal('CARMINATTI88');
-        expect(seatInfo[3].stack).to.equal('17438');
-
-        expect(seatInfo[4].seat).to.equal('5');
-        expect(seatInfo[4].name).to.equal('xxxxxxxx_br');
-        expect(seatInfo[4].stack).to.equal('1610');
-
-        expect(seatInfo[5].seat).to.equal('6');
-        expect(seatInfo[5].name).to.equal('ThiagodLara');
-        expect(seatInfo[5].stack).to.equal('3945');
-
-        expect(seatInfo[6].seat).to.equal('8');
-        expect(seatInfo[6].name).to.equal('nobby24480');
-        expect(seatInfo[6].stack).to.equal('9416');
-
-        expect(seatInfo[7].seat).to.equal('9');
-        expect(seatInfo[7].name).to.equal('lzduda');
-        expect(seatInfo[7].stack).to.equal('2635');
+      it("where is the button", function(){
+          var buttonPosition = hr.parseButtonInfo(this.hand);
+          expect(buttonPosition).to.equal('8');
+      })
 
     })
+
+    describe("seats", function(){
+      it("parse all seats", function(){
+          var seatInfo = hr.parseAllSeats(this.hand);
+
+          expect(seatInfo[0].seat).to.equal('1');
+          expect(seatInfo[0].name).to.equal('GCSANTOS10');
+          expect(seatInfo[0].stack).to.equal('17670');
+
+          expect(seatInfo[1].seat).to.equal('2');
+          expect(seatInfo[1].name).to.equal('markoAs999');
+          expect(seatInfo[1].stack).to.equal('11224');
+
+          expect(seatInfo[2].seat).to.equal('3');
+          expect(seatInfo[2].name).to.equal('Martin Royle');
+          expect(seatInfo[2].stack).to.equal('13085');
+
+          expect(seatInfo[3].seat).to.equal('4');
+          expect(seatInfo[3].name).to.equal('CARMINATTI88');
+          expect(seatInfo[3].stack).to.equal('17438');
+
+          expect(seatInfo[4].seat).to.equal('5');
+          expect(seatInfo[4].name).to.equal('xxxxxxxx_br');
+          expect(seatInfo[4].stack).to.equal('1610');
+
+          expect(seatInfo[5].seat).to.equal('6');
+          expect(seatInfo[5].name).to.equal('ThiagodLara');
+          expect(seatInfo[5].stack).to.equal('3945');
+
+          expect(seatInfo[6].seat).to.equal('8');
+          expect(seatInfo[6].name).to.equal('nobby24480');
+          expect(seatInfo[6].stack).to.equal('9416');
+
+          expect(seatInfo[7].seat).to.equal('9');
+          expect(seatInfo[7].name).to.equal('lzduda');
+          expect(seatInfo[7].stack).to.equal('2635');
+      })
+    })
+
+    describe("blinds actions", function(){
+      it("blinds actions not undefined", function(){
+        var actions = hr.parseBlindActions(this.hand);
+        expect(actions != undefined).to.equal(true);
+      })
+
+      it("blinds actions at least 2(small, big)", function(){
+        var actions = hr.parseBlindActions(this.hand);
+        expect(actions.length).to.equal(2);
+      })
+    })
+
+
 });

@@ -1,11 +1,9 @@
 var hr = hr || {};
 
-
 hr.parseBuyIn = function(hand){
     var regexp = /\$[0-9]+\.[0-9]+\+\$[0-9]+\.[0-9]+ [A-Z]{1,3}/;
     return regexp.exec(hand)[0];
 }
-
 
 hr.parseTypeOfGame = function(hand){
     var regexp = /Hold'em\s[A-Z][a-z]+.\s?[A-Za-z]+/;
@@ -51,6 +49,10 @@ hr.parseAllSeats = function(hand){
     }
 
     return allSeats;
+}
+
+hr.parseBlindActions = function(hand){
+  return ["",""]
 }
 
 module.exports = hr;
