@@ -40,17 +40,18 @@ hr.parseAllSeats = function(hand){
     while (matches = regexp.exec(hand)) {
         myArray.push(matches[0]);
     }
-    var allSeats = [];
-    for(var i=0;i<myArray.length;i++){
-        var seatInfo = hr.parseSeat(myArray[i]);
-        allSeats.push({
+    return myArray.map(m=>{
+        const seatInfo = hr.parseSeat(m);
+        return {
             seat: seatInfo.seat,
             name: seatInfo.name,
             stack: seatInfo.stack
-        })
-    }
+        }
+    })
+}
 
-    return allSeats;
+hr.parseAntes = function(hand){
+    
 }
 
 module.exports = hr;
