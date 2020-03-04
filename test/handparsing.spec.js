@@ -1,3 +1,7 @@
+describe("mock suit", () => {
+  test("mock test ", () => {});
+});
+
 // var hr = require('../source/handParser.js');
 // var expect = require('chai').expect;
 

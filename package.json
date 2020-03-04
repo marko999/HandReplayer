@@ -7,7 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -23,5 +27,8 @@
     "chai": "^3.3.0",
     "karma": "^1.2.0",
     "mocha": "^2.3.2"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
   }
 }

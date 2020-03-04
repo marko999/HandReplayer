@@ -1,0 +1,9 @@
+main:
+    ☐ validating whole hand, what are the required lines for the hand
+    ☐ extract positions of the players
+    ☐ draw table and seating(keep it fun)
+    ☐ good for now, extract more pokerstars hands from forums, cover it with tests
+extended:
+    ☐ make sure table drawing works on any screen
+    ☐ extract chips numbrers
+    ☐ draw chips
